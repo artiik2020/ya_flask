@@ -1,0 +1,23 @@
+import os
+
+from flask import Flask, render_template, request, redirect
+
+app = Flask(__name__, template_folder='static/templates')
+
+
+@app.route('/')
+def index1():
+    return """<!doctype html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8">
+                    <title>Привет, Яндекс!</title>
+                  </head>
+                  <body>
+                    <h1>Первая HTML-страница</h1>
+                  </body>
+                </html>"""
+
+
+if __name__ == '__main__':
+    app.run(port=8080, host='127.0.0.12')
