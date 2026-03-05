@@ -1,13 +1,13 @@
 import os
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__, template_folder='static/templates')
 
 
-@app.route('/<title>')
-def index1(title):
-    return render_template("base.html", title=title)
+@app.route('/login')
+def index1():
+    return render_template("add_to_base.html")
 
 
 if __name__ == '__main__':
